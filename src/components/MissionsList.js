@@ -8,7 +8,7 @@ const MissionsList = props => {
       ) : (
         <div>
           {props.missions.map(mission => (
-            <div className="mission" key={mission.mission_id}>
+            <div className="mission" key={mission.mission_id} data-testId = "mission">
               {mission.mission_name}
             </div>
           ))}
@@ -17,5 +17,8 @@ const MissionsList = props => {
     </section>
   );
 };
+
+//if data is passed into this app is it rendered the correct way?
+//MissionsList.test.js
 
 export default MissionsList;
